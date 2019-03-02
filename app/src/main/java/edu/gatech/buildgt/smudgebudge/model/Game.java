@@ -15,12 +15,37 @@ public class Game {
         this.setCurrentState();
     }
 
+    /**
+     * @returns the current score
+     */
+    public int correctGuess() {
+        this.setScore(this.getScore() + 1);
+        return score;
+    }
+
+    /**
+     *
+     * @return the current number of misses
+     */
+    public int incorrectGuess() {
+        this.setMisses(this.getMisses() + 1);
+        return misses;
+    }
+
     public int getScore() {
         return score;
     }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
     public int getMisses() {
         return this.misses;
+    }
+
+    public void setMisses(int misses) {
+        this.misses = misses;
     }
 
     public int getCurrentState() {
@@ -28,9 +53,11 @@ public class Game {
     }
 
     public void setCurrentState() {
-        int powerOfTwo = randNumGenerator.nextInt(13) + 1;
+        int powerOfTwo = randNumGenerator.nextInt(13);
         currentState = (int) Math.pow(2, powerOfTwo);
     }
+
+
 
 
 }

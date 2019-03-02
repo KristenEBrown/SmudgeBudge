@@ -56,8 +56,8 @@
         android:layout_height="wrap_content"
         android:onClick="onClickTopMiddle"
         android:text="@string/top_middle_btn"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="78dp" />
 
     <Button
         android:id="@+id/bottomPointerBtn"
@@ -142,9 +142,9 @@
 
     <TextView
         android:id="@+id/scoreTextView"
-        android:layout_width="95dp"
-        android:layout_height="20dp"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
         android:text="@string/score_display"
-        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteX="252dp"
         tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>
