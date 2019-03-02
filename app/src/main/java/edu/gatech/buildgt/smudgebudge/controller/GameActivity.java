@@ -7,17 +7,15 @@ import android.view.View;
 
 import edu.gatech.buildgt.smudgebudge.R;
 
-public class MainActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game);
     }
 
-    public void onClickBegin(View view) {
-        Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
-
+    public void onClickBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
     }
 }
