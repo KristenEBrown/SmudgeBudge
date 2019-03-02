@@ -32,7 +32,7 @@ public class GameActivity extends AppCompatActivity {
 
 
         this.game = new Game();
-        //game.sendMessage();
+        game.sendMessage();
     }
 
     private void endGame() {
@@ -45,7 +45,7 @@ public class GameActivity extends AppCompatActivity {
         scoreTextView.setText(String.valueOf(game.getScore()));
         missesTextView.setText(String.valueOf(game.getMisses()));
         game.setCurrentState();
-        //game.sendMessage();
+        game.sendMessage();
 
 
     }

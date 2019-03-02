@@ -8,13 +8,13 @@ public class Game {
     private int misses;
     private int currentState;
     private Random randNumGenerator = new Random();
-    //private Client client;
+    private Client client;
 
     public Game() {
         this.score = 0;
         this.misses = 0;
         this.setCurrentState();
-        //this.client = new Client();
+        this.client = new Client();
     }
 
     /**
@@ -59,9 +59,9 @@ public class Game {
         currentState = (int) Math.pow(2, powerOfTwo);
     }
 
-    //public void sendMessage() {
-    //    client.sendMessage(currentState);
-    //}
+    public void sendMessage() {
+        client.sendMessage(currentState);
+    }
 
 
 
