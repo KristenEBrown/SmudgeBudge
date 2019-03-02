@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import edu.gatech.buildgt.smudgebudge.R;
+import edu.gatech.buildgt.smudgebudge.model.Game;
 
 public class GameActivity extends AppCompatActivity {
+
+    private Game game;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
