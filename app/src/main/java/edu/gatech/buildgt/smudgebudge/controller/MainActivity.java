@@ -26,9 +26,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onClickBegin(View view) {
-        Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
-
-    }
 }
