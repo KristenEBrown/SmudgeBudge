@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 public class Client {
 
     public static final String TAG = Client.class.getSimpleName();
-    public static final String SERVER_IP = "192.168.1.8"; //server IP address
+    public static final String SERVER_IP = "192.168.43.156"; //server IP address
     public static final int SERVER_PORT = 25565;
     private DataOutputStream out;
     private Socket socket;
