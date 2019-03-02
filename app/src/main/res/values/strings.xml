@@ -2,4 +2,18 @@
     <string name="app_name">Smudge Budge</string>
     <string name="start_button">Begin</string>
     <string name="back_button">Back</string>
+    <string name="top_pointer_btn">Top Pointer</string>
+    <string name="bottom_pointer_btn">Bottom Pointer</string>
+    <string name="top_ring_btn">Top Ring</string>
+    <string name="bottom_ring_btn">Bottom Ring</string>
+    <string name="top_middle_btn">Top Middle</string>
+    <string name="bottom_middle_btn">Bottom Middle</string>
+    <string name="top_pinky_btn">Top Pinky</string>
+    <string name="bottom_pinky_btn">Bottom Pinky</string>
+    <string name="middle_dorsal_btn">Middle Dorsal</string>
+    <string name="left_dorsal_btn">Left Dorsal</string>
+    <string name="right_dorsal_btn">Right Dorsal</string>
+    <string name="left_wrist_btn">Left Wrist</string>
+    <string name="right_wrist_btn">Right Wrist</string>
+    <string name="score_display">Score: </string>
 </resources>
