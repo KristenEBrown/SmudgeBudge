@@ -19,7 +19,7 @@ public class Client {
      * Constructor of the class. OnMessagedReceived listens for the messages received from server
      */
     public Client() {
-        
+
     }
 
     /**
