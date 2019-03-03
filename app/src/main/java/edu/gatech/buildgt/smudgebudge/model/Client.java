@@ -19,7 +19,7 @@ public class Client {
      * Constructor of the class. OnMessagedReceived listens for the messages received from server
      */
     public Client() {
-        new Thread(new ClientThread()).start();
+        
     }
 
     /**
@@ -28,6 +28,20 @@ public class Client {
      * @param message text entered by client
      */
     public void sendMessage(final int message) {
+        while (out == null) {
+            try {
+                InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
+
+                socket = new Socket(serverAddr, SERVER_PORT);
+                out = new DataOutputStream(socket.getOutputStream());
+
+            } catch (UnknownHostException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+
         try {
             out.writeInt(message);
         } catch (IOException e) {
@@ -49,25 +63,4 @@ public class Client {
 
     }
 
-
-    class ClientThread implements Runnable {
-
-        @Override
-        public void run() {
-
-            try {
-                InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-
-                socket = new Socket(serverAddr, SERVER_PORT);
-                out = new DataOutputStream(socket.getOutputStream());
-
-            } catch (UnknownHostException e1) {
-                e1.printStackTrace();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-
-        }
-
-    }
 }
