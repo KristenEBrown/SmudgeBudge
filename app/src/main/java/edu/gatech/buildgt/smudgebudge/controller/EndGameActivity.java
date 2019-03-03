@@ -25,7 +25,7 @@ public class EndGameActivity extends AppCompatActivity {
         Intent extrasIntent = getIntent();
         Bundle extras = extrasIntent.getExtras();
         int score = extras.getInt("score");
-        scoreTextView.setText(score);
+        scoreTextView.setText(String.valueOf(score));
 
         layout.setOnClickListener(new View.OnClickListener() {
             @Override

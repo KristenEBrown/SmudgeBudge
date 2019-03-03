@@ -31,7 +31,6 @@ public class Client {
         while (out == null) {
             try {
                 InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-
                 socket = new Socket(serverAddr, SERVER_PORT);
                 out = new DataOutputStream(socket.getOutputStream());
 
