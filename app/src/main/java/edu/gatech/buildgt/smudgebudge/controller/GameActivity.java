@@ -31,7 +31,7 @@ public class GameActivity extends AppCompatActivity {
 
 
         this.game = new Game();
-        game.sendMessage();
+        //game.sendMessage();
     }
 
     private void endGame() {
@@ -44,7 +44,7 @@ public class GameActivity extends AppCompatActivity {
         scoreTextView.setText(String.valueOf(game.getScore()));
         missesTextView.setText(String.valueOf(game.getMisses()));
         game.setCurrentState();
-        game.sendMessage();
+        //game.sendMessage();
 
 
     }
@@ -81,87 +81,6 @@ public class GameActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-    public void onClickLeftDorsal(View view) {
-        if(game.getCurrentState() == 256) {
-            displayCorrect();
-            game.correctGuess();
-            this.update();
-        } else {
-            if (game.incorrectGuess() >= 3) {
-                this.endGame();
-            } else {
-                displayIncorrect();
-                this.update();
-            }
-        }
-    }
-
-    public void onClickRightDorsal(View view) {
-        if(game.getCurrentState() == 1024) {
-            displayCorrect();
-
-            game.correctGuess();
-            this.update();
-        } else {
-            if (game.incorrectGuess() >= 3) {
-                this.endGame();
-            } else {
-                displayIncorrect();
-                this.update();
-            }
-        }
-    }
-
-    public void onClickMiddleDorsal(View view) {
-        if(game.getCurrentState() == 512) {
-            displayCorrect();
-
-            game.correctGuess();
-            this.update();
-        } else {
-            if (game.incorrectGuess() >= 3) {
-                this.endGame();
-            } else {
-                displayIncorrect();
-                this.update();
-            }
-        }
-
-    }
-
-    public void onClickLeftWrist(View view) {
-        if(game.getCurrentState() == 2048) {
-            displayCorrect();
-
-            game.correctGuess();
-            this.update();
-        } else {
-            if (game.incorrectGuess() >= 3) {
-                this.endGame();
-            } else {
-                displayIncorrect();
-                this.update();
-            }
-        }
-
-    }
-
-    public void onClickRightWrist(View view) {
-        if(game.getCurrentState() == 4096) {
-            displayCorrect();
-
-            game.correctGuess();
-            this.update();
-        } else {
-            if (game.incorrectGuess() >= 3) {
-                this.endGame();
-            } else {
-                displayIncorrect();
-                this.update();
-            }
-        }
-    }
 
     public void onClickTopPinky(View view) {
         if(game.getCurrentState() == 64) {

@@ -55,7 +55,7 @@ public class Game {
     }
 
     public void setCurrentState() {
-        int powerOfTwo = randNumGenerator.nextInt(13);
+        int powerOfTwo = randNumGenerator.nextInt(8);
         currentState = (int) Math.pow(2, powerOfTwo);
     }
 
