@@ -31,7 +31,8 @@ public class GameActivity extends AppCompatActivity {
 
 
         this.game = new Game();
-        //game.sendMessage();
+        // TODO: FIX SEND MESSAGE FUNCTIONALITY, WHICH SENDS THE BUZZER TO BE BUZZED
+        // game.sendMessage();
     }
 
     private void endGame() {

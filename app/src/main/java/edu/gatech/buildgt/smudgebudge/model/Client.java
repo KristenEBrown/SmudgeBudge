@@ -1,5 +1,7 @@
 package edu.gatech.buildgt.smudgebudge.model;
 
+import android.util.Log;
+
 import java.io.IOException;
 import java.io.DataOutputStream;
 import java.net.InetAddress;
@@ -29,13 +31,18 @@ public class Client {
      */
     public void sendMessage(final int message) {
         try {
+            Log.d("Socket", socket.toString());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+            Log.d("Client", socket.toString());
             out.writeInt(message);
         } catch (UnknownHostException e) {
+            Log.d("UnknownHost", out.toString());
             e.printStackTrace();
         } catch (IOException e) {
+            Log.d("IOException", out.toString());
             e.printStackTrace();
         } catch (Exception e) {
+            Log.d("Exception", out.toString());
             e.printStackTrace();
         }
     }
@@ -60,8 +67,9 @@ public class Client {
 
             try {
                 InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-
+                Log.d("a", "hello");
                 socket = new Socket(serverAddr, SERVER_PORT);
+                Log.d("Socket", socket.toString());
 
             } catch (UnknownHostException e1) {
                 e1.printStackTrace();

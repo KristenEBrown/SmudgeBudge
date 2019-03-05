@@ -14,7 +14,9 @@ public class Game {
         this.score = 0;
         this.misses = 0;
         this.setCurrentState();
-        this.client = new Client();
+
+        //TODO: FIX BROKEN CLIENT CONNECTION
+        //this.client = new Client();
     }
 
     /**
